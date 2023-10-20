@@ -1,4 +1,5 @@
 import argparse
+import base64
 import glob
 import json
 import logging
@@ -505,6 +506,14 @@ def train_index(spk_name,root_dir = "dataset/44k/"):  #from: RVC https://github.
     # )
     print("Successfully build index")
     return index
+
+
+def base64_encode(stream):
+    return str(base64.b64encode(stream), "utf-8")
+
+
+def base64_decode(base64_str: str):
+    return base64.b64decode(base64_str)
 
 
 class HParams():
