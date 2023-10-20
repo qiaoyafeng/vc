@@ -516,6 +516,15 @@ def base64_decode(base64_str: str):
     return base64.b64decode(base64_str)
 
 
+def get_resp():
+    resp = {
+            "code": 0,
+            "message": "操作成功！",
+            "success": True,
+            "data": {},
+        }
+    return resp
+
 class HParams():
   def __init__(self, **kwargs):
     for k, v in kwargs.items():
